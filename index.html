@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="Images/fav.png" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="header" data-elevate>
+    <div class="header__top">
+      <div class="container header__inner header__inner--top">
+        <a class="brand" href="#home">
+          <img class="brand__logo" src="Images/logo-2.png" alt="" />
+        </a>
+
+        <div class="header__right">
+          <div class="social" aria-label="Social media">
+            <a class="social__link" href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6V11H7.3v3h2.5v8h3.7Z"/>
+              </svg>
+            </a>
+            <a class="social__link" href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M18.9 2H22l-6.8 7.7L23 22h-6.2l-4.9-6.3L6.3 22H2l7.4-8.3L1 2h6.4l4.4 5.7L18.9 2Zm-1.1 18h1.7L6.4 3.9H4.6L17.8 20Z"/>
+              </svg>
+            </a>
+            <a class="social__link" href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.8v2h.1c.5-1 1.9-2.1 3.9-2.1 4.2 0 5 2.8 5 6.4V23h-4v-6.9c0-1.7 0-3.9-2.4-3.9-2.4 0-2.8 1.9-2.8 3.8V23h-4V8.5Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container header__inner header__inner--bottom">
+        <nav class="nav" data-nav>
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="features.html">Features &amp; Modules</a>
+          <a class="nav__link" href="service.html">The Service</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="news.html">News</a>
+        </nav>
+
+        <button class="navbtn" type="button" data-navbtn aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__col hero__col--left">
+          <h1 class="hero__heading">
+            We are preserving Ghana's <span class="highlight">history,</span><br>
+            one <span class="highlight">document</span> at a time.
+          </h1>
+        </div>
+
+        <div class="hero__col hero__col--right">
+          <div class="hero__text">
+            <p>For decades, accessing a public record in Ghana meant navigating a slow, paper-based  process, travelling to a PRAAD office, searching through manual registers, and waiting days  or even weeks for results. Government ministries delivered records in boxes. Citizens  queued in reading rooms. Important documents were often difficult to trace, retrieve, or  preserve.</p>
+
+            <p>This is more than digitization. It is a national shift toward efficient governance, institutional  transparency, and modern public service delivery in Ghana.</p>
+
+            <p>The PRAAD Management System is transforming how Ghana preserves and accesses its  public records. Built as a unified digital platform, it securely stores records from across  government institutions, makes them instantly searchable, and ensures that the right  people can access the right information at the right time.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="features" class="section">
+      <div class="container container--wide">
+        <h2 class="section__title">FEATURES &amp; MODULES</h2>
+
+        <div class="features-modern-grid">
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Centralized Records Management</h3>
+              <div class="feature-item__line"></div>
+              <p>The Centralized Records Management Module enables government institutions to efficiently create, capture, classify, organize, and manage official records throughout their lifecycle.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Digital Archives & Repository</h3>
+              <div class="feature-item__line"></div>
+              <p>This module provides secure digital storage for archival records and historical documents. It allows authorized users to preserve, access, and retrieve digitized records electronically.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Records Classification System</h3>
+              <div class="feature-item__line"></div>
+              <p>PRAAD uses a structured classification and indexing system to organize records according to departments, functions, dates, and categories for improved search accuracy.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Records Retention & Disposal</h3>
+              <div class="feature-item__line"></div>
+              <p>The retention and disposal module helps institutions manage records according to approved retention schedules and legal requirements while ensuring historically valuable documents are preserved.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Archival Preservation</h3>
+              <div class="feature-item__line"></div>
+              <p>This module focuses on the long-term preservation of physical and electronic records. It includes conservation procedures, environmental monitoring, and restoration support.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Public Access Portal</h3>
+              <div class="feature-item__line"></div>
+              <p>The public access portal allows researchers, students, historians, and citizens to request and access archival information while protecting sensitive data through controlled access.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Electronic Records (ERMS)</h3>
+              <div class="feature-item__line"></div>
+              <p>The ERMS module supports the management of electronic records and digital workflows. It enables secure document sharing, version control, and digital filing.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10H3M21 6H3M21 14H3M21 18H3"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Document Tracking System</h3>
+              <div class="feature-item__line"></div>
+              <p>This feature enables institutions to monitor the movement and status of records and files in real time, reducing delays and improving operational efficiency.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Security & Access Control</h3>
+              <div class="feature-item__line"></div>
+              <p>PRAAD incorporates advanced security measures to protect records from unauthorized access. This includes user authentication, permissions, and audit trails.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Digitization & Scanning</h3>
+              <div class="feature-item__line"></div>
+              <p>The digitization module supports the conversion of physical records into electronic formats through high-quality scanning and imaging processes.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Reporting & Analytics</h3>
+              <div class="feature-item__line"></div>
+              <p>This module generates reports and analytics on records management activities, usage, and compliance to support informed decision-making.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Training & Development</h3>
+              <div class="feature-item__line"></div>
+              <p>PRAAD provides training and educational support for records officers and public sector staff through workshops and policy resources.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Disaster Recovery & Backup</h3>
+              <div class="feature-item__line"></div>
+              <p>Protect archival information against cyber threats and system failures with secure data recovery and long-term preservation solutions.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Policy Management</h3>
+              <div class="feature-item__line"></div>
+              <p>Helping public institutions comply with records management laws, policies, and regulatory frameworks through effective governance standards.</p>
+              <a href="features.html" class="feature-item__btn">More Info</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="service" class="section section--alt service-showcase">
+      <div class="container service-showcase__grid">
+        <div class="service-showcase__content">
+          <h2 class="section__title section__title--left">THE SERVICE</h2>
+          <ul class="service-list">
+            <li><a href="service.html#records-mgmt">Records and Archives Management</a></li>
+            <li><a href="service.html#preservation">Preservation and Conservation of Historical Records</a></li>
+            <li><a href="service.html#reference">Public Access and Reference Services</a></li>
+            <li><a href="service.html#digital">Digital Records Management</a></li>
+            <li><a href="service.html#advisory">Advisory and Consultancy Services</a></li>
+            <li><a href="service.html#training">Records Training and Capacity Building</a></li>
+            <li><a href="service.html#appraisal">Records Appraisal and Disposal</a></li>
+            <li><a href="service.html#research">Archival Research Support</a></li>
+          </ul>
+          <a href="service.html" class="btn btn--explore" style="margin-top: 40px;">LEARN MORE</a>
+        </div>
+        
+        <div class="service-showcase__media">
+          <div class="service-showcase__img-wrap">
+            <img src="Images/still-life-documents-stack.jpg" alt="Historical Documents Stack" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--your-way">
+      <div class="your-way__media">
+        <img src="Images/young-student-working-assignment.jpg" alt="Student working" />
+      </div>
+
+      <div class="container your-way__grid">
+        <div class="your-way__highlight">
+          <span class="your-way__sup">THE DIGITAL GATEWAY</span>
+          <h2 class="your-way__title">YOUR RECORDS,<br>YOUR WAY</h2>
+          <div class="your-way__line"></div>
+          <p class="your-way__desc">Access the national records system on your terms. Whether you are a citizen searching for history or a government agency managing workflows, PRAAD is built to adapt to your needs.</p>
+        </div>
+
+        <div class="your-way__features">
+          <div class="your-way__item">
+            <svg class="your-way__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="your-way__item-content">
+              <h4>Full Catalogue</h4>
+              <p>Search the full national records catalogue instantly.</p>
+            </div>
+          </div>
+          <div class="your-way__item">
+            <svg class="your-way__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <div class="your-way__item-content">
+              <h4>Free Downloads</h4>
+              <p>Download open public records for free in digital formats.</p>
+            </div>
+          </div>
+          <div class="your-way__item">
+            <svg class="your-way__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div class="your-way__item-content">
+              <h4>Access Requests</h4>
+              <p>Request secure access to restricted government records.</p>
+            </div>
+          </div>
+          <div class="your-way__item">
+            <svg class="your-way__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <div class="your-way__item-content">
+              <h4>Appointments</h4>
+              <p>Book reading room appointments for original documents.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="your-way__actions">
+          <a href="service.html" class="btn btn--explore btn--outlined">EXPLORE MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="onboarding" class="section section--onboarding">
+      <div class="container">
+        <h2 class="section__title">THE ONBOARDING</h2>
+        
+        <div class="onboarding-grid">
+          <div class="onboarding__content">
+            <div class="onboarding-items-grid">
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">01</span>
+                  <span class="onboarding-bar__title">Data Collection and Records Preparation</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>Existing physical and electronic records are gathered, reviewed, and prepared for migration into the PRAAD system. This process includes records sorting, classification, indexing, file verification, metadata assignment, and identification of records for digitization or archival preservation.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">02</span>
+                  <span class="onboarding-bar__title">Digitization and Data Migration</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>Physical records are scanned and converted into digital formats where necessary. Existing electronic records and databases are securely migrated into the new system while maintaining data integrity, accuracy, and accessibility throughout the transition process.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">03</span>
+                  <span class="onboarding-bar__title">System Integration and Testing</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>The configured system undergoes testing to ensure all modules, workflows, security controls, and retrieval functions operate effectively. Integration with existing institutional systems may also be carried out to support seamless information management and operational continuity.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">04</span>
+                  <span class="onboarding-bar__title">User Training and Capacity Building</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>PRAAD provides comprehensive training sessions for records officers, administrators, and institutional staff. Training covers system usage, records management procedures, digital workflows, security protocols, document retrieval, and compliance responsibilities to ensure smooth adoption.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">05</span>
+                  <span class="onboarding-bar__title">Pilot Deployment and Validation</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>A pilot implementation is conducted within selected departments or units to evaluate system performance under real operational conditions. Feedback is collected, adjustments are made where necessary, and final validations are completed before full deployment.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">06</span>
+                  <span class="onboarding-bar__title">Full System Deployment</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>After successful testing and validation, the PRAAD solution is fully deployed across the institution. All approved users gain access to the system, and records management operations officially transition into the new environment.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">07</span>
+                  <span class="onboarding-bar__title">Monitoring and Post-Implementation Support</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>PRAAD provides continuous technical support, monitoring, and maintenance services after deployment. This includes system updates, troubleshooting, performance monitoring, user assistance, backup management, and ongoing advisory services to ensure long-term operational success.</p>
+                </div>
+              </div>
+
+              <div class="onboarding-item accordion__item">
+                <div class="onboarding-bar accordion__trigger">
+                  <span class="onboarding-bar__num">08</span>
+                  <span class="onboarding-bar__title">Compliance Review and Continuous Improvement</span>
+                  <svg class="onboarding-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="onboarding-content accordion__content">
+                  <p>Periodic evaluations are conducted to ensure the institution remains compliant with records management policies and archival standards. PRAAD also supports continuous improvement initiatives through system enhancements, policy updates, and advanced records management recommendations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+
+    <section id="about" class="section section--about-video">
+      <div class="about-video__bg-block"></div>
+      <div class="container">
+        <div class="about-video__grid">
+          <div class="about-video__media">
+            <div class="about-video__img-wrap">
+              <img src="Images/shelves.jpg" alt="PRAAD Archives" />
+            </div>
+          </div>
+
+          <div class="about-video__content">
+            <h2 class="about-video__title">About</h2>
+
+            
+            <div class="about-video__line"></div>
+            
+            <div class="about-video__text">
+              <p>The PRAAD Management System is transforming how Ghana preserves and accesses its public records. Built as a unified digital platform, it securely stores records from across government institutions, makes them instantly searchable, and ensures that the right people can access the right information at the right time.</p>
+              
+              <p>This is more than digitization. It is a national shift toward efficient governance, institutional transparency, and modern public service delivery in Ghana.</p>
+
+              <div class="about-video__meta">
+                <h3 class="about-video__sub-title">Who can access PRAAD?</h3>
+                <ul class="about-video__access-list">
+                  <li>Government Institutions</li>
+                  <li>Private Institutions</li>
+                  <li>Individuals</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="about-video__actions">
+              <a href="about.html" class="btn btn--video-join">EXPLORE MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <img class="footer__logo" src="Images/logo-1.png" alt="PRAAD Logo" />
+        <p class="footer__tagline">Preserving Ghana's history, one document at a time. The official digital gateway to the Public Records and Archives Administration Department.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Contact Us</h4>
+        <ul class="footer__contact">
+          <li>
+            <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>P.O. Box 3056, Accra, Ghana</span>
+          </li>
+          <li>
+            <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+233 (0) 302 662 044</span>
+          </li>
+          <li>
+            <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@praad.gov.gh</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Public Records and Archives Administration Department (PRAAD), Ghana. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
