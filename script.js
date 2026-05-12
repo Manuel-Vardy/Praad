@@ -74,6 +74,9 @@
     if (!container || typeof newsData === 'undefined') return;
 
     const renderGrid = () => {
+      const hero = document.querySelector('.news-hero');
+      if (hero) hero.style.display = 'block';
+
       let html = '<div class="news-grid">';
       newsData.forEach(article => {
         html += `
@@ -113,40 +116,80 @@
 
     const renderArticle = (id) => {
       const article = newsData.find(a => a.id === id);
+      const hero = document.querySelector('.news-hero');
+      
       if (!article) {
+        if (hero) hero.style.display = 'block';
         renderGrid();
         return;
       }
 
+      if (hero) hero.style.display = 'none';
+
+      const relatedArticles = newsData
+        .filter(a => a.id !== id)
+        .slice(0, 3);
+
       container.innerHTML = `
-        <article class="news-article">
-          <header class="news-article__header">
-            <h1 class="news-article__title">${article.title}</h1>
-            <div class="news-article__meta">
-              <div class="news-article__meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>${article.date}</span>
+        <div class="news-article-layout">
+          <article class="news-article">
+            <header class="news-article__header">
+              <h1 class="news-article__title">${article.title}</h1>
+              <div class="news-article__meta">
+                <div class="news-article__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>${article.date}</span>
+                </div>
+                <div class="news-article__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  <span>${article.readTime}</span>
+                </div>
               </div>
-              <div class="news-article__meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                <span>${article.readTime}</span>
-              </div>
+            </header>
+
+            <div class="news-article__featured-img">
+              <img src="${article.image}" alt="${article.title}" />
             </div>
-          </header>
 
-          <div class="news-article__featured-img">
-            <img src="${article.image}" alt="${article.title}" />
-          </div>
+            <div class="news-article__content">
+              ${article.content}
+            </div>
+            
+            <div style="margin-top: 60px;">
+              <a href="news.html" class="btn--explore" id="back-to-news" style="padding: 14px 32px;">Back to News</a>
+            </div>
+          </article>
 
-          <div class="news-article__content">
-            ${article.content}
-          </div>
-          
-          <div style="margin-top: 60px;">
-            <a href="news.html" class="btn--explore" id="back-to-news" style="padding: 14px 32px;">Back to News</a>
-          </div>
-        </article>
+          <aside class="news-sidebar">
+            <h3 class="news-sidebar__title">Related Stories</h3>
+            <div class="news-sidebar__list">
+              ${relatedArticles.map(rel => `
+                <a href="?article=${rel.id}" class="related-card" data-id="${rel.id}">
+                  <div class="related-card__img">
+                    <img src="${rel.image}" alt="${rel.title}" />
+                  </div>
+                  <div class="related-card__body">
+                    <span class="related-card__date">${rel.date}</span>
+                    <h4 class="related-card__title">${rel.title}</h4>
+                  </div>
+                </a>
+              `).join('')}
+            </div>
+          </aside>
+        </div>
       `;
+
+      // Re-add listeners for related cards
+      const relatedCards = container.querySelectorAll('.related-card');
+      relatedCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          const relId = card.getAttribute('data-id');
+          history.pushState({ articleId: relId }, '', `?article=${relId}`);
+          renderArticle(relId);
+          window.scrollTo(0, 0);
+        });
+      });
 
       const backBtn = document.getElementById('back-to-news');
       if (backBtn) {
@@ -249,9 +292,87 @@
     updateCarousel();
   };
 
+  function initNewsHero() {
+    const track = document.getElementById('news-hero-track');
+    const dotsContainer = document.getElementById('hero-dots');
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+
+    if (!track || !newsData || newsData.length === 0) return;
+
+    // Use latest 5 articles for the hero
+    const heroArticles = newsData.slice(0, 5);
+    let currentIndex = 0;
+
+    // Render slides
+    track.innerHTML = heroArticles.map((article, index) => `
+      <div class="news-hero__slide" data-id="${article.id}">
+        <img src="${article.image}" alt="${article.title}" class="news-hero__img">
+        <div class="news-hero__overlay">
+          <div class="news-hero__content">
+            <h3 class="news-hero__title">${article.title}</h3>
+            <div class="news-hero__date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ${article.date}
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Render dots
+    dotsContainer.innerHTML = heroArticles.map((_, i) => `
+      <div class="news-hero__dot ${i === 0 ? 'is-active' : ''}" data-index="${i}"></div>
+    `).join('');
+
+    const slides = track.querySelectorAll('.news-hero__slide');
+    const dots = dotsContainer.querySelectorAll('.news-hero__dot');
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === currentIndex);
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % heroArticles.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + heroArticles.length) % heroArticles.length;
+      updateCarousel();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        updateCarousel();
+      });
+    });
+
+    // Handle slide click to open article
+    slides.forEach(slide => {
+      slide.addEventListener('click', () => {
+        const id = slide.dataset.id;
+        window.history.pushState({ articleId: id }, '', `?article=${id}`);
+        initNews();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Auto play
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % heroArticles.length;
+      updateCarousel();
+    }, 6000);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     setActiveLink();
     initNews();
+    initNewsHero();
   });
 
   window.addEventListener('scroll', () => {
