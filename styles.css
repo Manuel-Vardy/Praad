@@ -1640,6 +1640,149 @@ body{
   transform: translateY(-3px);
 }
 
+/* ── Hero CTA Button ─────────────────────────────────────── */
+.hero__cta {
+  margin-top: 36px;
+}
+
+/* Desktop: show in left column, hide in right column */
+.hero__cta--desktop { display: block; }
+.hero__cta--mobile  { display: none; }
+
+.btn--hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fbbf24;
+  color: #002d4b;
+  padding: 18px 48px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border-radius: 0;
+  border: 2px solid #fbbf24;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--hero-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.25s ease;
+}
+
+.btn--hero-cta:hover::before {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn--hero-cta svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/*.btn--hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(251, 191, 36, 0.45);
+  background: #f9c846;
+}*/
+
+.btn--hero-cta:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── Pre-footer CTA Banner ───────────────────────────────── */
+.prefooter-cta {
+  background: transparent;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.prefooter-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.prefooter-cta__text {
+  flex: 1;
+}
+
+.prefooter-cta__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.prefooter-cta__sub {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.btn--prefooter-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fbbf24;
+  color: #002d4b;
+  padding: 20px 52px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border-radius: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn--prefooter-cta svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/*.btn--prefooter-cta:hover {
+  background: #f9c846;
+  color: #002d4b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(251, 191, 36, 0.35);
+}*/
+
+.btn--prefooter-cta:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .prefooter-cta { padding: 60px 0; }
+  .prefooter-cta__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .btn--prefooter-cta { width: 100%; max-width: 340px; justify-content: center; padding: 18px 36px; }
+  .btn--hero-cta { padding: 16px 36px; font-size: 13px; }
+
+  /* On mobile: hide the left-column button, show the right-column one */
+  .hero__cta--desktop { display: none; }
+  .hero__cta--mobile  { display: block; }
+}
 
 .about-video__more-link {
   color: rgba(255,255,255,0.6);
